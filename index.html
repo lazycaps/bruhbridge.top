@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fade In Sequence</title>
+  <style>
+
+    a {
+        color: white;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .image {
+        height: 100px;
+    }
+
+    .title {
+      font-size: 3rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeMoveUp 2s ease-out forwards;
+    }
+
+    .contact {
+      font-size: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .contact:nth-child(2) {
+      animation-delay: 2.5s;
+    }
+
+    .contact:nth-child(3) {
+      animation-delay: 3.5s;
+    }
+
+    @keyframes fadeMoveUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+        <h1>bruhbridge.top</h1>
+    </div>
+    <div class="contact">
+        <a href="https://discord.gg/9hqbVnQW62">discord</a>
+        <a href="mailto:hello@bruhbridge.top">email</a>
+        <a href="https://store.bruhbridge.top">store</a>
+        
+    </div>
+  </div>
+</body>
+</html>
